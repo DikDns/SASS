@@ -1,0 +1,56 @@
+// .main {
+//   background-color: gainsboro;
+
+//   .main-heading {
+//     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+//     font-size: 2em;
+//   }
+
+//   .main-paragraph {
+//     font-size: 1.25em;
+//   }
+// }
+
+.main,
+footer {
+  h1,
+  p {
+    text-decoration: none;
+    word-spacing: 0.25em;
+  }
+}
+
+// Parent Selector (&)
+.main {
+  .container & {
+    padding: 0;
+  }
+
+  &:hover {
+    background-color: aquamarine;
+  }
+}
+
+.main {
+  & &-heading {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+  }
+
+  & &-paragraph {
+    font-size: 1.25em;
+  }
+}
+
+footer {
+  .footer {
+    &-heading {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.5em;
+    }
+
+    &-paragraph {
+      font-size: 1em;
+    }
+  }
+}
