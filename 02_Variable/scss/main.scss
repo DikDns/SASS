@@ -1,0 +1,31 @@
+//! SASS Variables
+$primary-color: #023047;
+$secondary-color: #219ebc;
+$tertiary-color: #8ecae6;
+$primary-text-color: #ffb703;
+$secondary-text-color: #fb8500;
+
+body {
+  background-color: $primary-color;
+}
+
+.container {
+  $local-color: salmon;
+  $force_global: red !global;
+  .header {
+    color: $local-color;
+  }
+  footer {
+    color: $local-color;
+  }
+}
+
+$alert: (
+  "danger": red,
+  "success": green,
+  "warning": orange,
+);
+
+h1 {
+  color: map-get($alert, "danger");
+}
