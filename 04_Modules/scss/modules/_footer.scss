@@ -1,0 +1,12 @@
+@use "mixin" as m;
+
+.footer ul {
+  @include m.inline-list();
+  li {
+    background-color: salmon;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
