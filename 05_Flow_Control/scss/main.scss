@@ -1,0 +1,119 @@
+@mixin profile-pic($size, $circle: false) {
+  width: $size;
+  height: $size;
+  border: 5px solid white;
+  box-shadow: 1px 1px 3px rgba($color: #000, $alpha: 0.25);
+
+  @if $circle {
+    border-radius: 50%;
+  }
+}
+
+.square-profile {
+  @include profile-pic(200px);
+}
+
+.circle-profile {
+  @include profile-pic(80px, true);
+}
+
+$light-bg: #edf2f4;
+$light-text: #2b2d42;
+$dark-bg: #2b2d42;
+$dark-text: #edf2f4;
+
+@mixin color-mode($light-mode: true) {
+  @if $light-mode {
+    background-color: $light-bg;
+    color: $light-text;
+  } @else {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+}
+
+.nav {
+  @include color-mode(true);
+  width: 100%;
+  padding: 5px 0;
+  margin-bottom: 25px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    li {
+      list-style: none;
+      font-size: 28px;
+      font-family: "Cascadia Code";
+      margin: 0 50px;
+    }
+  }
+}
+
+body {
+  min-height: 1000px;
+  margin: 0;
+  padding: 0;
+  @include color-mode(false);
+}
+
+@mixin triangle($size, $direction, $color) {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: $size / 2;
+  @if $direction == top {
+    border-bottom-color: $color;
+  } @else if $direction == right {
+    border-left-color: $color;
+  } @else if $direction == left {
+    border-right-color: $color;
+  } @else {
+    border-top-color: $color;
+  }
+}
+
+.right {
+  @include triangle(2em, right, $dark-text);
+}
+
+$color: #d90429;
+
+.gradient {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @for $i from 1 to 11 {
+    li:nth-child(#{$i}) {
+      padding: 4px;
+      background-color: lighten($color, $i * 2%);
+    }
+  }
+}
+
+$social-colors: (
+  youtube: red,
+  twitter: lightblue,
+  instagram: yellow,
+  twitch: purple,
+  facebook: blue,
+);
+
+.socials {
+  font-size: 2em;
+  font-family: "cascadia code";
+  background-color: $light-bg;
+
+  @each $social, $color in $social-colors {
+    .#{$social} {
+      color: $color;
+    }
+  }
+}

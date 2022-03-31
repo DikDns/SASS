@@ -1,0 +1,145 @@
+.square-profile {
+  width: 200px;
+  height: 200px;
+  border: 5px solid white;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.circle-profile {
+  width: 80px;
+  height: 80px;
+  border: 5px solid white;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.nav {
+  background-color: #edf2f4;
+  color: #2b2d42;
+  width: 100%;
+  padding: 5px 0;
+  margin-bottom: 25px;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav ul li {
+  list-style: none;
+  font-size: 28px;
+  font-family: "Cascadia Code";
+  margin: 0 50px;
+}
+
+body {
+  min-height: 1000px;
+  margin: 0;
+  padding: 0;
+  background-color: #2b2d42;
+  color: #edf2f4;
+}
+
+.right {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1em;
+  border-left-color: #edf2f4;
+}
+
+.gradient {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gradient li:nth-child(1) {
+  padding: 4px;
+  background-color: #e3042b;
+}
+
+.gradient li:nth-child(2) {
+  padding: 4px;
+  background-color: #ed042d;
+}
+
+.gradient li:nth-child(3) {
+  padding: 4px;
+  background-color: #f7052f;
+}
+
+.gradient li:nth-child(4) {
+  padding: 4px;
+  background-color: #fb0b35;
+}
+
+.gradient li:nth-child(5) {
+  padding: 4px;
+  background-color: #fb153d;
+}
+
+.gradient li:nth-child(6) {
+  padding: 4px;
+  background-color: #fb1f45;
+}
+
+.gradient li:nth-child(7) {
+  padding: 4px;
+  background-color: #fb294e;
+}
+
+.gradient li:nth-child(8) {
+  padding: 4px;
+  background-color: #fb3356;
+}
+
+.gradient li:nth-child(9) {
+  padding: 4px;
+  background-color: #fb3d5e;
+}
+
+.gradient li:nth-child(10) {
+  padding: 4px;
+  background-color: #fc4767;
+}
+
+.socials {
+  font-size: 2em;
+  font-family: "cascadia code";
+  background-color: #edf2f4;
+}
+
+.socials .youtube {
+  color: red;
+}
+
+.socials .twitter {
+  color: lightblue;
+}
+
+.socials .instagram {
+  color: yellow;
+}
+
+.socials .twitch {
+  color: purple;
+}
+
+.socials .facebook {
+  color: blue;
+}
+/*# sourceMappingURL=main.css.map */
