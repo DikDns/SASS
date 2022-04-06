@@ -1,0 +1,63 @@
+//! Built-in Modules
+
+/*
+  adjust-color(
+    $color,
+    $red: null,
+    $green: null,
+    $blue: null,
+    $hue: null,
+    $saturation: null,
+    $lightness: null,
+    $whiteness: null,
+    $blackness: null,
+    $alpha: null,
+  )
+*/
+$primary-color: salmon;
+$secondary-color: lightskyblue;
+h1 {
+  // font-family: Arial, Helvetica, sans-serif;
+  // font-size: 3em;
+  // color: adjust-color($color: salmon, $blue: 0, $red: -50, $green: 100);
+}
+
+// adjust-hue($color, $degree);
+
+h1 {
+  // font-family: Arial, Helvetica, sans-serif;
+  // font-size: 3em;
+  // color: adjust-hue($color: $primary-color, $degrees: 90deg);
+}
+
+// complement($color);
+
+h1 {
+  // font-family: Arial, Helvetica, sans-serif;
+  // font-size: 3em;
+  // color: complement($color: $primary-color);
+}
+
+// darken($color, $amount);
+// lighten($color, $amount);
+// saturate($color, $amount);
+// desaturate($color, $amount);
+// grayscale($color);
+
+// mix($color_1, $color_2, $weight: 50%);
+
+h1 {
+  // font-family: Arial, Helvetica, sans-serif;
+  // font-size: 3em;
+  // color: mix($primary-color, $secondary-color, 50%);
+}
+
+//! OPACITY
+// fade-in($color, $amount);
+// fade-out($color, $amount);
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  color: fade-out($primary-color, 0.5);
+}
